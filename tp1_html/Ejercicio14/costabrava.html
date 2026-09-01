@@ -4,57 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deportes General Pico - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body style="background-image: url(recursos/fondo.png);"> 
+<body> 
 
-    <header style="background: linear-gradient(to right, #082d19, #21763e); text-align: center; color: white; padding: 10px; border-radius: 15px;">
+    <header>
         <h1>Ciudad de General Pico</h1>
         <h2>Nuestros Clubes Deportivos</h2>
     </header>
 
-    <br>
+    <nav>
+        <ul>
+            <li><a href="./index.html">Página principal</a></li>
+            <li><a href="./cayca.html">Club Atlético y Cultural Argentino</a></li>
+            <li><a href="./pfc.html">Pico Futbol Club</a></li>
+            <li><a href="./independiente.html">Club Sportivo Independiente</a></li>
+            <li><a href="./costabrava.html">Costa Brava</a></li>
+            <li><a href="./ferro.html">Ferro Carril Oeste</a></li>
+        </ul>
+    </nav>
 
-    <table border="1" width="100%" text-align: center; style="border-collapse: collapse;">
-        <tr style="background: linear-gradient(to right, #082d19, #21763e); color: white;">
-            <th>Club</th>
-            <th>Información Breve</th>
-            <th>Acceso al sitio</th>
-        </tr>
-        <tr>
-            <th>Club Atlético y Cultural Argentino</th>
-            <td>Conocido popularmente como el "Decano", con fuerte presencia en el barrio Pacífico.</td>
-            <td><a href="cayca.html">Ver página</a></td>
-        </tr>
-        <tr>
-            <th>Pico Futbol Club</th>
-            <td>Institución histórica destacada por su participación en ligas nacionales de básquet y fútbol.</td>
-            <td><a href="pfc.html">Ver página</a></td>
-        </tr>
-        <tr>
-            <th>Club Sportivo Independiente</th>
-            <td>El "Rojo" de General Pico, famoso por sus campeonatos de básquet y sus amplias instalaciones.</td>
-            <td><a href="independiente.html">Ver página</a></td>
-        </tr>
-        <tr>
-            <th>Costa Brava</th>
-            <td>Club tradicional de la ciudad con un gran arraigo barrial y pasión por el fútbol local.</td>
-            <td><a href="costabrava.html">Ver página</a></td>
-        </tr>
-        <tr>
-            <th>Ferro Carril Oeste</th>
-            <td>El club "Verdolaga", con gran infraestructura y representante de la ciudad en torneos federales.</td>
-            <td><a href="ferro.html">Ver página</a></td>
-        </tr>
-    </table>
+    <div class="club-intro">
+    
+        <img src="recursos/Club_Atlético_Costa_Brava.png" alt="Escudo del Club Atlético Costa Brava" class="escudo-club">
+        
+        <h2 class="nombre-club">Club Atlético Costa Brava</h2>
+        
+        <h3 class="subtitulo-club">"El Costero" - Fundado el 20 de agosto de 1932</h3>
 
-    <div style="text-align: center;">
-            <img src="./recursos/generalpico.jpg" alt="Vista de General Pico" height="500">
     </div>
 
-    <footer style="text-align: center; background: linear-gradient(to right, #082d19, #21763e); color: white; padding: 10px; margin-top: 20px; border-radius: 15px;">
-        <p>Trabajo Práctico N° 1 - Programación Orientada a la Web</p>
-        <p>Integrantes del grupo: </p>
-    </footer>
+    <div class="seccion-texto">
     
+    <h3 class="titulo-seccion">Un poco de nuestra historia</h3>
+    
+    <p class="parrafo-club">
+        El <strong>Club Atlético Costa Brava</strong>, fundado el 20 de agosto de 1932, es uno de los pilares deportivos e institucionales más grandes de General Pico. Reconocidos popularmente bajo el apodo de <em>"El Costero"</em> y vistiendo con orgullo sus tradicionales colores rojo y blanco, el club ha construido una riquísima historia íntimamente ligada al desarrollo del fútbol pampeano.
+    </p>
+
+    <p class="parrafo-club">
+        Con su sede social ubicada en el corazón de la ciudad y su imponente estadio, el <strong>Nuevo Pacaembú</strong>, Costa Brava es un protagonista indiscutido de la Liga Pampeana de Fútbol y representante habitual en los torneos regionales a nivel nacional. Además del fútbol de primera división e inferiores, la institución alberga múltiples disciplinas, consolidándose como un espacio de contención, deporte y familia para toda la comunidad piquense.
+    </p>
+
+</div>
+
+    <div class="caja-info">
+    
+    <h3 class="titulo-seccion">Información del Club</h3>
+    
+    <ul class="lista-info">
+        <li><strong>Colores:</strong> Rojo y Blanco</li>
+        <li><strong>Sede Social:</strong> Calle 23 entre 20 y 22, General Pico</li>
+        <li><strong>Estadio:</strong> Nuevo Pacaembú</li>
+        <li><strong>Disciplinas destacadas:</strong> Fútbol (Primera, Formativas e Infantil), Básquet, Patín y Bochas.</li>
+    </ul>
+
+    </div>
+
+
+<div class="contenedor-mapa">
+    
+    <h3 class="titulo-mapa">Ubicación de la Sede</h3>
+    
+    <iframe class="mapa-iframe"
+        src="https://maps.google.com/maps?q=Club%20Atletico%20Costa%20Brava%20General%20Pico&output=embed" 
+        width="80%" 
+        height="400" 
+        style="border: none; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0,0,0,0.2);" 
+        allowfullscreen="" 
+        loading="lazy">
+    </iframe>
+
+</div>
+
+    <footer>
+        <p style="font-size: 12px;">Trabajo Práctico N°1 - © 2026 - Programación Orientada a la Web</p>
+        <p style="font-size: 12px;">Integrantes del grupo: Martínez, Braian - Figueroa, Joaquin - Salazar, Esteban</p>
+    </footer>
+
 </body>
 </html>
