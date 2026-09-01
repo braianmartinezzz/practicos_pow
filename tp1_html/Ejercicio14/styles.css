@@ -2,11 +2,12 @@ body {
   background-image: url(recursos/fondo.png);
 }
 
-div{
+div {
   text-align: center;
 }
 
-header, footer {
+header,
+footer {
   background: linear-gradient(to right, #082d19, #21763e);
   text-align: center;
   color: white;
@@ -18,28 +19,10 @@ footer {
   margin-top: 20px;
 }
 
-.texto-footer {
+footer p {
   font-size: 12px;
 }
 
-table {
-  width: 100%;
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-
-th, td {
-  border: 1px solid black;
-}
-
-.fila-encabezado {
-  background: linear-gradient(to right, #082d19, #21763e);
-  color: white;
-}
-
-/* ===== Página de detalle de club (reutilizable para todos los clubes) ===== */
-
-/* Escudo, nombre y apodo del club */
 .club-intro {
   text-align: center;
   margin-top: 20px;
@@ -51,18 +34,17 @@ th, td {
 }
 
 .nombre-club {
-  color: #0A381F;
+  color: #0a381f;
   font-size: 32px;
   margin-bottom: 5px;
 }
 
 .subtitulo-club {
-  color: #4B4B4B;
+  color: #4b4b4b;
   font-style: italic;
   margin-top: 0;
 }
 
-/* Bloque de texto con la historia del club */
 .seccion-texto {
   margin: 20px auto;
   width: 80%;
@@ -70,8 +52,8 @@ th, td {
 }
 
 .titulo-seccion {
-  color: #0A381F;
-  border-bottom: 2px solid #0A381F;
+  color: #0a381f;
+  border-bottom: 2px solid #0a381f;
   padding-bottom: 5px;
 }
 
@@ -82,7 +64,6 @@ th, td {
   text-align: justify;
 }
 
-/* Caja con datos de contacto del club */
 .caja-info {
   margin: 20px auto;
   width: 80%;
@@ -99,7 +80,6 @@ th, td {
   font-size: 18px;
 }
 
-/* Mapa de ubicación */
 .contenedor-mapa {
   text-align: center;
   margin-top: 40px;
@@ -107,7 +87,7 @@ th, td {
 }
 
 .titulo-mapa {
-  color: #0A381F;
+  color: #0a381f;
   margin-bottom: 15px;
 }
 
@@ -123,7 +103,7 @@ nav {
   margin: 20px auto;
   width: 95%;
   max-width: 1200px;
-  background: linear-gradient(to right, #082d19, #21763e); /* El verde de tu diseño */
+  background: linear-gradient(to right, #082d19, #21763e);
   border-radius: 15px;
   overflow: hidden;
 }
@@ -144,7 +124,7 @@ nav ul li a {
   font-size: 13px;
   padding: 8px 12px;
   display: inline-block;
-  white-space: nowrap; /* Evita que se rompa el nombre de un club en dos renglones */
+  white-space: nowrap;
 }
 
 nav ul li a:hover {
@@ -154,101 +134,93 @@ nav ul li a:hover {
 
 .galeria-mixta {
   display: grid;
-  /* La magia: Columnas adaptables de mínimo 250px */
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px; /* Espacio entre los videos y las fotos */
+  gap: 15px;
   margin: 20px 0;
 }
 
-/* Estilos compartidos para que videos y fotos se vean parejos */
-.galeria-mixta img, 
+.galeria-mixta img,
 .galeria-mixta iframe {
   width: 100%;
-  height: 200px; /* Forzamos una altura uniforme para prolijidad */
-  border-radius: 10px; /* Mantiene tu estilo redondeado */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Una pequeña sombra para dar profundidad */
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Evita que las imágenes se deformen al forzarles la altura */
 .galeria-mixta img {
-  object-fit: cover; 
+  object-fit: cover;
 }
 
-/* Contenedor principal de la agenda */
 .agenda-contenedor {
-    max-width: 700px;
-    margin: 30px auto;
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa; /* Fondo un poco grisáceo para que resalte */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombrita suave */
+  max-width: 700px;
+  margin: 30px auto;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Título de la sección */
 .agenda-titulo {
-    text-align: center;
-    color: #1e5e3a; /* El verde de tu header */
-    border-bottom: 2px solid #1e5e3a;
-    padding-bottom: 15px;
-    margin-top: 0;
-    margin-bottom: 20px;
+  text-align: center;
+  color: #1e5e3a;
+  border-bottom: 2px solid #1e5e3a;
+  padding-bottom: 15px;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
-/* Estilo de la fila de cada partido */
 .evento-calendario {
-    display: flex;
-    align-items: center;
-    background-color: #ffffff;
-    margin-bottom: 15px;
-    padding: 15px;
-    border-radius: 8px;
-    border-left: 6px solid #1e5e3a; /* Borde verde a la izquierda */
-    transition: transform 0.2s; /* Efectito de movimiento */
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 6px solid #1e5e3a;
+  transition: transform 0.2s;
 }
 
 .evento-calendario:hover {
-    transform: translateX(5px); /* Se mueve a la derecha cuando pasas el mouse */
+  transform: translateX(5px);
 }
 
-/* El cuadradito del calendario */
 .icono-fecha {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #1e5e3a;
-    color: white;
-    border-radius: 8px;
-    width: 65px;
-    height: 65px;
-    margin-right: 20px;
-    flex-shrink: 0;
-    box-shadow: inset 0 -3px 0 rgba(0,0,0,0.2); /* Detalle 3D */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e5e3a;
+  color: white;
+  border-radius: 8px;
+  width: 65px;
+  height: 65px;
+  margin-right: 20px;
+  flex-shrink: 0;
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.2);
 }
 
 .icono-fecha .mes {
-    font-size: 0.8rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .icono-fecha .dia {
-    font-size: 1.6rem;
-    font-weight: bold;
-    line-height: 1;
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1;
 }
 
-/* Textos del partido */
 .detalles-evento h3 {
-    margin: 0 0 5px 0;
-    color: #333333;
-    font-size: 1.2rem;
+  margin: 0 0 5px 0;
+  color: #333333;
+  font-size: 1.2rem;
 }
 
 .detalles-evento p {
-    margin: 0;
-    color: #666666;
-    font-size: 0.95rem;
+  margin: 0;
+  color: #666666;
+  font-size: 0.95rem;
 }
