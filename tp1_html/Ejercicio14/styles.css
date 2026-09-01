@@ -2,6 +2,10 @@ body {
   background-image: url(recursos/fondo.png);
 }
 
+div{
+  text-align: center;
+}
+
 header, footer {
   background: linear-gradient(to right, #082d19, #21763e);
   text-align: center;
@@ -33,39 +37,7 @@ th, td {
   color: white;
 }
 
-/* ===== Contenedor del video ===== */
-.contenedor-video {
-  text-align: center;
-  margin: 30px 0;
-}
-
-.contenedor-video iframe {
-  width: 59%;
-  height: 450px;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-}
-
 /* ===== Página de detalle de club (reutilizable para todos los clubes) ===== */
-
-/* Botón "Volver a página principal" */
-.contenedor-volver {
-  text-align: left;
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-
-.btn-volver {
-  background: linear-gradient(to right, #082d19, #21763e);
-  color: white;
-  padding: 12px 25px;
-  text-decoration: none;
-  font-size: 10px;
-  border-radius: 8px;
-  font-weight: bold;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
 
 /* Escudo, nombre y apodo del club */
 .club-intro {
@@ -121,7 +93,8 @@ th, td {
 }
 
 .lista-info {
-  list-style-type: square;
+  list-style-type: none;
+  padding: 0;
   line-height: 1.8;
   font-size: 18px;
 }
@@ -144,4 +117,138 @@ th, td {
   border: none;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  margin: 20px auto;
+  width: 95%;
+  max-width: 1200px;
+  background: linear-gradient(to right, #082d19, #21763e); /* El verde de tu diseño */
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  gap: 15px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 8px 12px;
+  display: inline-block;
+  white-space: nowrap; /* Evita que se rompa el nombre de un club en dos renglones */
+}
+
+nav ul li a:hover {
+  background: linear-gradient(to right, #21763e, #082d19);
+  border-radius: 15px;
+}
+
+.galeria-mixta {
+  display: grid;
+  /* La magia: Columnas adaptables de mínimo 250px */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px; /* Espacio entre los videos y las fotos */
+  margin: 20px 0;
+}
+
+/* Estilos compartidos para que videos y fotos se vean parejos */
+.galeria-mixta img, 
+.galeria-mixta iframe {
+  width: 100%;
+  height: 200px; /* Forzamos una altura uniforme para prolijidad */
+  border-radius: 10px; /* Mantiene tu estilo redondeado */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Una pequeña sombra para dar profundidad */
+}
+
+/* Evita que las imágenes se deformen al forzarles la altura */
+.galeria-mixta img {
+  object-fit: cover; 
+}
+
+/* Contenedor principal de la agenda */
+.agenda-contenedor {
+    max-width: 700px;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Fondo un poco grisáceo para que resalte */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombrita suave */
+}
+
+/* Título de la sección */
+.agenda-titulo {
+    text-align: center;
+    color: #1e5e3a; /* El verde de tu header */
+    border-bottom: 2px solid #1e5e3a;
+    padding-bottom: 15px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Estilo de la fila de cada partido */
+.evento-calendario {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 6px solid #1e5e3a; /* Borde verde a la izquierda */
+    transition: transform 0.2s; /* Efectito de movimiento */
+}
+
+.evento-calendario:hover {
+    transform: translateX(5px); /* Se mueve a la derecha cuando pasas el mouse */
+}
+
+/* El cuadradito del calendario */
+.icono-fecha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e5e3a;
+    color: white;
+    border-radius: 8px;
+    width: 65px;
+    height: 65px;
+    margin-right: 20px;
+    flex-shrink: 0;
+    box-shadow: inset 0 -3px 0 rgba(0,0,0,0.2); /* Detalle 3D */
+}
+
+.icono-fecha .mes {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.icono-fecha .dia {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* Textos del partido */
+.detalles-evento h3 {
+    margin: 0 0 5px 0;
+    color: #333333;
+    font-size: 1.2rem;
+}
+
+.detalles-evento p {
+    margin: 0;
+    color: #666666;
+    font-size: 0.95rem;
 }

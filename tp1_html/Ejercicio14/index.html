@@ -7,65 +7,86 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body> 
-
+    
     <header>
         <h1>Ciudad de General Pico</h1>
         <h2>Nuestros Clubes Deportivos</h2>
     </header>
 
-    <br>
+    <nav>
+        <ul>
+            <li><a href="#home">Página principal</a></li>
+            <li><a href="./cayca.html">Club Atlético y Cultural Argentino</a></li>
+            <li><a href="#news">Pico Futbol Club</a></li>
+            <li><a href="#contact">Club Sportivo Independiente</a></li>
+            <li><a href="#about">Costa Brava</a></li>
+            <li><a href="#about">Ferro Carril Oeste</a></li>
+        </ul>
+    </nav>
 
-    <table>
-        <tr style="background: linear-gradient(to right, #082d19, #21763e); color: white;">
-            <th>Club</th>
-            <th>Información Breve</th>
-            <th>Acceso al sitio</th>
-        </tr>
-        <tr>
-            <th>Club Atlético y Cultural Argentino</th>
-            <td>Conocido popularmente como el "Decano", con fuerte presencia en el barrio Pacífico.</td>
-            <td><a href="cayca.html">Ver página</a></td>
-        </tr>
-        <tr>
-            <th>Pico Futbol Club</th>
-            <td>Institución histórica destacada por su participación en ligas nacionales de básquet y fútbol.</td>
-            <td><a href="pfc.html">Ver página</a></td>
-        </tr>
-        <tr>
-            <th>Club Sportivo Independiente</th>
-            <td>El "Rojo" de General Pico, famoso por sus campeonatos de básquet y sus amplias instalaciones.</td>
-            <td><a href="independiente.html">Ver página</a></td>
-        </tr>
-        <tr>
-            <th>Costa Brava</th>
-            <td>Club tradicional de la ciudad con un gran arraigo barrial y pasión por el fútbol local.</td>
-            <td><a href="costabrava.html">Ver página</a></td>
-        </tr>
-        <tr>
-            <th>Ferro Carril Oeste</th>
-            <td>El club "Verdolaga", con gran infraestructura y representante de la ciudad en torneos federales.</td>
-            <td><a href="ferro.html">Ver página</a></td>
-        </tr>
-    </table>
-
-    <br>
-
-     <div class="contenedor-video"> 
-        <iframe 
-            width="59%" 
-            height="450" 
-            src="https://www.youtube.com/embed/2eLw-kRVgOE" 
-            title="Reproductor de video" 
-            style="border: none; border-radius: 15px; box-shadow: 0px 4px 8px rgba(0,0,0,0.3);" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
+    <div>
+        <p>Descubrí la pasión por el deporte en General Pico. Encontra la institución ideal para entrenar, competir y unirte a la comunidad.</p>
     </div>
 
+    <div class="agenda-contenedor">
+    <h2 class="agenda-titulo">Calendario Deportivo</h2>
+    
+    <!-- Primer Partido -->
+    <div class="evento-calendario">
+        <div class="icono-fecha">
+            <span class="mes">SEP</span>
+            <span class="dia">05</span>
+        </div>
+        <div class="detalles-evento">
+            <h3>Costa Brava vs. Ferro</h3>
+            <p><strong>Fútbol</strong> - Nuevo Pacaembú | 15:30 hs</p>
+        </div>
+    </div>
+
+    <!-- Segundo Partido -->
+    <div class="evento-calendario">
+        <div class="icono-fecha">
+            <span class="mes">SEP</span>
+            <span class="dia">05</span>
+        </div>
+        <div class="detalles-evento">
+            <h3>Pico FC vs. Sp. Independiente</h3>
+            <p><strong>Básquet</strong> - Parque Ángel Larrea | 20:00 hs</p>
+        </div>
+    </div>
+
+    <!-- Tercer Partido -->
+        <div class="evento-calendario">
+            <div class="icono-fecha">
+                <span class="mes">SEP</span>
+                <span class="dia">06</span>
+            </div>
+            <div class="detalles-evento">
+                <h3>C.A. y Cultural Argentino vs. Ferro</h3>
+                <p><strong>Vóley</strong> - El Volcán | 10:00 hs</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="galeria-mixta">
+  <!-- Elemento 1: Imagen -->
+  <img src="./recursos/cacb.jpg" alt="Instalaciones del club">
+  
+  <!-- Elemento 2: Video -->
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/_uFw48a0l9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  
+  <!-- Elemento 3: Imagen -->
+  <img src="./recursos/cayca.JPG" alt="Pre juego de futbol cayca">
+  
+  <!-- Elemento 4: Imagen -->
+  <img src="./recursos/PicoFC.jpg" alt="Jugando al basquet">
+</div>
+
     <footer>
-        <p style="font-size: 12px;">Trabajo Práctico N° 1 - Programación Orientada a la Web</p>
-        <p style="font-size: 12px;">Integrantes del grupo: </p>
+        <p style="font-size: 12px;">Trabajo Práctico N°1 - © 2026 - Programación Orientada a la Web</p>
+        <p style="font-size: 12px;">Integrantes del grupo: Martínez, Braian - Figueroa, Joaquin - Salazar, Esteban</p>
     </footer>
 
 </body>
 </html>
+
