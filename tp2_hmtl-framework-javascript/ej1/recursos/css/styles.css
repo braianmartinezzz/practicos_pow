@@ -1,0 +1,23 @@
+body{
+    background-image: url("../fondoMadera.png");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section{
+    width: 900px;
+    background-color: white;
+}
+
+section article div h1{
+    text-align: center;
+}
+
+section article p{
+    text-align: justify;
+}
+
+section article img{
+    width: 900px;
+}

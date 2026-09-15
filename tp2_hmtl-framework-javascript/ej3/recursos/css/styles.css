@@ -1,0 +1,60 @@
+body {
+    background-color: #e5e5e5;
+}
+
+.contenedor-principal {
+    max-width: 950px;
+}
+
+.tarjeta-marco {
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+.tarjeta-fondo {
+    background: linear-gradient(rgba(200, 100, 0, 0.85), rgba(200, 100, 0, 0.85)), url('https://via.placeholder.com/600x400/333333/cccccc?text=Foto');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.tarjeta-titulo {
+    background-color: #111111;
+    color: #ffffff;
+    font-family: 'Arial Black', Impact, sans-serif;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    padding: 15px 10px;
+    margin: 0;
+}
+
+.tarjeta-cuerpo {
+    padding: 35px 25px;
+}
+
+.tarjeta-cuerpo p {
+    color: #ffffff;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+.btn-negro {
+    background-color: #111111;
+    color: #ffffff;
+    font-family: 'Arial Black', Impact, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 25px;
+    font-size: 0.9rem;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+}
+
+.btn-negro:hover {
+    background-color: #333333;
+    color: #ffffff;
+}

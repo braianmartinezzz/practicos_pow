@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de CUIL</title>
+    <!-- Enlace a Bootstrap -->
+    <link rel="stylesheet" href="./recursos/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./recursos/css/styles.css">
+</head>
+
+<body class="p-5 bg-light">
+
+    <div class="card-custom">
+        <h4 class="text-center mb-4" style="color: #2b2b2b; font-weight: 600;">Verificar CUIL / CUIT</h4>
+
+        <div class="mb-4">
+            <label for="inputCuil" class="form-label text-muted small mb-1">Ingrese el número (con o sin
+                guiones):</label>
+            <input type="text" class="form-control form-control-lg" id="inputCuil" placeholder="Ej: 20-12345678-6">
+        </div>
+
+        <button class="btn btn-primary w-100 btn-lg mb-3" onclick="verificar()">Validar Número</button>
+
+        <div id="resultado" class="text-center mt-3"
+            style="display: none; border-radius: 8px; padding: 12px; font-weight: 500;"></div>
+    </div>
+
+    <script src="./recursos/js/script.js"></script>
+</body>
+
+</html>

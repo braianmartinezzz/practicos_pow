@@ -1,0 +1,23 @@
+.contenedor-diagrama {
+    background-color: #d1d5db;
+}
+
+.caja-verde {
+    background-color: #17a2b8;
+    color: #111827;
+}
+
+.caja-gris {
+    background-color: #6c757d;
+    color: #ffffff;
+}
+
+.bloque-contenedor {
+    background-color: #d1d5db; 
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.caja-verde, .caja-gris {
+    text-align: center;
+}
