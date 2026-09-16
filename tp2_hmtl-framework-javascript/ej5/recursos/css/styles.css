@@ -1,0 +1,49 @@
+body {
+    padding: 20px;
+}
+
+.caja-color {
+    background-color: #cfd23b; 
+    padding: 40px;
+    display: flex;
+    gap: 40px; 
+}
+
+.menu {
+    width: 200px; 
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu a {
+    display: block; 
+    background-color: #ffffff; 
+    color: #0000ff; 
+    text-decoration: none; 
+    padding: 10px 15px; 
+    margin-bottom: 15px; 
+    font-family: serif; 
+    font-size: 18px;
+    border-right: 20px solid #000000; 
+}
+
+.contenido {
+    color: #800080; 
+    font-family: sans-serif; 
+}
+
+.contenido h1 {
+    font-size: 42px;
+    margin-top: 0; 
+    margin-bottom: 25px;
+}
+
+.contenido p {
+    font-size: 20px;
+    line-height: 1.5; 
+    margin-bottom: 20px;
+}

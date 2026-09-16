@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #ffffff;
+    font-family: sans-serif;
+}
+
+.tarjeta {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 900px;
+    height: 450px;
+}
+
+.panel-azul {
+    background-color: #2188e9;
+    color: #ffffff;
+    padding: 40px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.panel-azul h2 {
+    margin: 0;
+    font-size: 34px;
+    line-height: 1.1;
+    font-weight: 600;
+}
+
+.panel-imagen {
+    width: 100%;
+    height: 100%;
+}
+
+.panel-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.panel-cita {
+    background-color: #e5e8ef;
+    padding: 60px 40px;
+    color: #333333;
+}
+
+.panel-cita p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.panel-cita .autor {
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: right;
+    margin-bottom: 0;
+}
