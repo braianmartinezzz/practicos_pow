@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container-primera {
+    background-color: #2af5ff;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #999;
+}
+
+.container-primera h2 { 
+    text-align: center; 
+    margin-top: 0; 
+}
+
+.section-title { 
+    font-weight: bold; 
+    font-size: 14px; 
+    margin: 15px 0 5px; 
+    display: block; 
+}
+
+.container-primera label { 
+    font-size: 13px; 
+}
+
+.container-primera input[type="text"], 
+.container-primera select { 
+    width: 100%; 
+    box-sizing: border-box; 
+    margin-top: 3px; 
+    padding: 4px; 
+}
+
+.radio-group { 
+    font-size: 12px; 
+    margin-top: 5px; 
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.checkbox-group { 
+    font-size: 12px; 
+    line-height: 1.6; 
+}
+
+.btn { 
+    width: 100%; 
+    padding: 10px; 
+    margin-top: 10px; 
+    border: none; 
+    border-radius: 20px; 
+    font-weight: bold; 
+    cursor: pointer; 
+}
+
+.btn-enviar { 
+    background-color: #4ade80; 
+    color: #000; 
+}
+
+.btn-borrar { 
+    background-color: #e91e63; 
+    color: white; 
+    margin-bottom: 10px; 
+}
+
+.container-segunda {
+    background-color: #fff000;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #999;
+}
+
+.btn-completar {
+    width: 100%;
+    background-color: #00ff7f;
+    color: #111;
+    border: none;
+    border-radius: 20px;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.card {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 13px;
+    margin: 0 0 5px 0;
+}
+
+.card-text {
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.btn-eliminar {
+    width: 100%;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}

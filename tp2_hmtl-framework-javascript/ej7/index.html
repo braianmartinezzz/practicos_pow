@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primera Página - Heladería</title>
+    <link rel="stylesheet" href="./recursos/styles.css">
+</head>
+<body>
+
+    <div class="container-primera">
+        <h2>Heladería</h2>
+        
+        <form action="segundaPagina.html" method="GET">
+            
+            <span class="section-title">Añade un producto:</span>
+            <label>Categoría:</label>
+            <select name="categoria">
+                <option>Seleccione Categoría ...</option>
+                <option>Helado</option>
+                <option>Torta</option>
+            </select>
+
+            <span class="section-title">Sabores que ofrecemos</span>
+            <label>Sabor:</label>
+            <input type="text" name="sabor">
+            
+            <label style="display:block; margin-top:10px;">Cantidad:</label>
+            <input type="text" name="cantidad">
+
+            <div class="radio-group">
+                <label><input type="radio" name="tamano" checked> Pequeño (2)</label>
+                <label><input type="radio" name="tamano"> Mediano (5)</label>
+                <label><input type="radio" name="tamano"> Grande (7)</label>
+            </div>
+
+            <span class="section-title">Complementos:</span>
+            <div class="checkbox-group">
+                <label><input type="checkbox"> Maní</label><br>
+                <label><input type="checkbox"> Chispas de Chocolate</label><br>
+                <label><input type="checkbox"> Chispas de Colores</label><br>
+                <label><input type="checkbox"> Leche Condensada</label>
+            </div>
+
+            <button type="submit" class="btn btn-enviar">Enviar</button>
+            <button type="reset" class="btn btn-borrar">Borrar</button>
+        </form>
+    </div>
+
+</body>
+</html>

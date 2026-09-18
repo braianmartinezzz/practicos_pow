@@ -1,0 +1,12 @@
+.galeria img {
+  width: 150px;
+  margin: 10px;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.destacada {
+  transform: scale(1.15);
+  border-color: orange;
+}
