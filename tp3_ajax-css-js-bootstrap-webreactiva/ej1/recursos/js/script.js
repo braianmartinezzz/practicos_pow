@@ -31,7 +31,11 @@ function verificarNumero() {
     let resultado = document.getElementById('mensaje-feedback');
     let contadorVisual = document.getElementById('intentos-actuales');
 
-    if (numero === 0) return;
+    if (numero < 1 || numero > 1000){
+        resultado.innerHTML = 'El número tiene que estar entre 1 y 1000';
+        resultado.className = 'alert alert-danger text-center fw-bold shadow-sm';
+        return;
+    }
 
     intentos++;
     contadorVisual.innerText = intentos;
