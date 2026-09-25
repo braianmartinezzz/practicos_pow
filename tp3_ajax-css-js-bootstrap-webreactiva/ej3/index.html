@@ -3,13 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 1</title>
-    <link rel="stylesheet" href="./recursos/css/styles.css">
+    <title>Pokédex Reactiva</title>
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./recursos/css/bootstrap.min.css">
+    <style>
+        .bg-pokedex { background-color: #dc3545; } /* Rojo clásico de Pokémon */
+        .pokemon-img {
+            max-width: 250px;
+            filter: drop-shadow(0 10px 10px rgba(0,0,0,0.3));
+        }
+    </style>
 </head>
-<body>
-    
-    
+<body class="bg-light min-vh-100">
+
+    <!-- Barra superior tipo Pokédex -->
+    <div class="bg-pokedex text-white py-3 mb-5 shadow">
+        <div class="container text-center">
+            <h1 class="fw-bold mb-0">Pokédex con AJAX</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Buscador -->
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-6">
+                <div class="input-group input-group-lg shadow-sm">
+                    <input type="text" id="input-busqueda" class="form-control" placeholder="Nombre o número (ej: pikachu, 150)">
+                    <button class="btn btn-dark fw-bold px-4" id="btn-buscar">Buscar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Spinner de carga -->
+        <div id="cargando" class="text-center d-none my-5">
+            <div class="spinner-border text-danger" style="width: 3rem; height: 3rem;" role="status">
+                <span class="visually-hidden">Cargando...</span>
+            </div>
+        </div>
+
+        <!-- Tarjeta del Pokémon (Oculta hasta que haya datos) -->
+        <div class="row justify-content-center d-none" id="tarjeta-pokemon">
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-lg text-center p-4 rounded-4">
+                    
+                    <div class="mb-3">
+                        <span class="badge bg-secondary fs-6 rounded-pill" id="poke-id">#000</span>
+                    </div>
+                    
+                    <img src="" alt="Pokemon" id="poke-img" class="pokemon-img mx-auto d-block mb-3">
+                    
+                    <h2 class="card-title fw-bold text-capitalize" id="poke-nombre">Nombre</h2>
+                    
+                    <!-- Contenedor para los tipos (fuego, agua, etc.) -->
+                    <div id="poke-tipos" class="mb-4"></div>
+
+                    <div class="row text-muted border-top pt-3 mt-2">
+                        <div class="col-6 border-end">
+                            <small class="text-uppercase d-block fw-bold">Peso</small>
+                            <span id="poke-peso" class="fs-5">0</span> kg
+                        </div>
+                        <div class="col-6">
+                            <small class="text-uppercase d-block fw-bold">Altura</small>
+                            <span id="poke-altura" class="fs-5">0</span> m
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Mensaje de Error -->
+        <div id="mensaje-error" class="alert alert-danger text-center fw-bold d-none max-w-500 mx-auto mt-4" role="alert">
+            Pokémon no encontrado. Verificá el nombre e intentá de nuevo.
+        </div>
+
+    </div>
 
     <script src="./recursos/js/script.js"></script>
 </body>
