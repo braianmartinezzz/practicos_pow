@@ -1,0 +1,193 @@
+/* ==========================================================
+   Estilos del "Turnero Aleatorio"
+   La idea: que se vea y se sienta como un turnero real de
+   oficina (banco, farmacia, etc.), no como una tarjeta genérica.
+   Para eso usamos 3 elementos que todos reconocemos:
+     1) un cartel arriba, como el letrero de la oficina
+     2) una pantalla oscura tipo LED con el número
+     3) un botón rojo grande, como el de "saque su número"
+   Fuentes: "Inter" para texto normal, "Share Tech Mono" para
+   los números (imita una pantalla digital).
+   ========================================================== */
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 3rem 1rem;
+    font-family: 'Inter', sans-serif;
+    background-color: #eef1f6;
+}
+
+/* ---------- Tarjeta general ---------- */
+.turnero-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    /* para que el cartel de arriba respete el borde redondeado */
+    box-shadow: 0 10px 30px rgba(20, 30, 60, 0.12);
+}
+
+/* Cartel superior oscuro, como el letrero de la oficina de turnos */
+.turnero-cartel {
+    background-color: #1c2541;
+    color: #ffffff;
+    font-family: 'Share Tech Mono', monospace;
+    letter-spacing: 0.04em;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    padding: 0.9rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+/* El puntito verde que parpadea, como el "encendido" de un cartel */
+.turnero-cartel-punto {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #3ddc84;
+    box-shadow: 0 0 6px #3ddc84;
+    animation: parpadeo 1.6s infinite ease-in-out;
+}
+
+@keyframes parpadeo {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+.turnero-cuerpo {
+    background-color: #ffffff;
+}
+
+/* ---------- Formulario de límites ---------- */
+.etiqueta-turnero {
+    color: #6b7280;
+    font-weight: 600;
+}
+
+.input-turnero {
+    border: 2px solid #dfe3ea;
+    font-weight: 600;
+    color: #1c2541;
+}
+
+.input-turnero:focus {
+    border-color: #1c2541;
+    box-shadow: none;
+}
+
+.btn-guardar-turnero {
+    background-color: #1c2541;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 10px;
+}
+
+.btn-guardar-turnero:hover,
+.btn-guardar-turnero:focus {
+    background-color: #141a2e;
+    color: #ffffff;
+}
+
+.divisor-turnero {
+    border: none;
+    border-top: 1px solid #eef1f6;
+    opacity: 1;
+}
+
+/* ---------- Pantalla digital ---------- */
+.pantalla-digital {
+    background-color: #12172b;
+    border-radius: 12px;
+    padding: 1.2rem 1rem;
+}
+
+.pantalla-digital-label {
+    font-family: 'Share Tech Mono', monospace;
+    color: #6b8fb5;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.pantalla-digital-numero {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: #ff4d4d;
+    text-shadow: 0 0 12px rgba(255, 77, 77, 0.55);
+    line-height: 1;
+}
+
+/* ---------- Botón físico de "sacar número" ---------- */
+/* El truco para que parezca un botón real y no plano:
+   una sombra sólida más oscura debajo (simula el "costado"
+   del botón) que se achica cuando lo apretás. */
+.btn-turnero-fisico {
+    background-color: #e63946;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 999px;
+    padding: 0.9rem 2.6rem;
+    box-shadow: 0 6px 0 #a4222c;
+    transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.btn-turnero-fisico:hover,
+.btn-turnero-fisico:focus {
+    background-color: #e63946;
+    color: #ffffff;
+}
+
+.btn-turnero-fisico:active {
+    transform: translateY(6px);
+    box-shadow: 0 0 0 #a4222c;
+}
+
+/* ---------- Historial, como el papel de una impresora de tickets ---------- */
+.historial-turnero {
+    background-color: #fbf9f4;
+    border: 1px solid #eee6d3;
+    border-radius: 10px;
+    /* línea punteada arriba, como la perforación del papel */
+    border-top: 3px dashed #d8cba3;
+}
+
+.historial-titulo {
+    color: #9a8f6f;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.72rem;
+}
+
+.historial-lista {
+    font-family: 'Share Tech Mono', monospace;
+    color: #6b5d3a;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+/* ---------- Botón reiniciar ---------- */
+.btn-reiniciar-turnero {
+    background-color: transparent;
+    border: none;
+    color: #9aa1b1;
+    font-weight: 600;
+}
+
+.btn-reiniciar-turnero:hover,
+.btn-reiniciar-turnero:focus {
+    color: #e63946;
+}

@@ -1,16 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 1</title>
-    <link rel="stylesheet" href="./recursos/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./recursos/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./recursos/css/styles.css">
 </head>
+
 <body>
-    
-    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card turnero-card border-0 p-4">
+                    <h2 class="text-center titulo-turnero fw-bold mb-4">Turnero Aleatorio</h2>
+
+                    <!-- Configuración de Límites -->
+                    <div class="row g-2 mb-4">
+                        <div class="col-6">
+                            <label class="form-label etiqueta-turnero small mb-1">Límite Inferior</label>
+                            <input type="number" id="limite-inf" class="form-control text-center input-turnero"
+                                placeholder="Ej: 10">
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label etiqueta-turnero small mb-1">Límite Superior</label>
+                            <input type="number" id="limite-sup" class="form-control text-center input-turnero"
+                                placeholder="Ej: 60">
+                        </div>
+                        <div class="col-12 mt-2">
+                            <button class="btn btn-guardar-turnero w-100" id="btn-guardar-limites">Guardar
+                                Límites</button>
+                        </div>
+                    </div>
+
+                    <hr class="divisor-turnero">
+
+                    <!-- Generador -->
+                    <div class="text-center my-4">
+                        <button class="btn btn-generar-turnero px-5 mb-3 fw-bold btn-danger" id="btn-generar">
+                            Generar Turno
+                        </button>
+                        <!-- Pantalla del Número -->
+                        <div class="numero-pantalla my-3" id="numero-pantalla">--</div>
+                        <!-- Mensaje de Error (Oculto por defecto) -->
+                        <div id="mensaje-sistema" class="alert alert-danger d-none small py-2" role="alert"></div>
+                    </div>
+
+                    <!-- Historial y Reinicio -->
+                    <div class="historial-turnero p-3 text-center mb-3">
+                        <p class="small mb-1 historial-titulo">Números ya salientes</p>
+                        <div id="historial-numeros" class="fw-bold historial-lista" style="min-height: 24px;">-</div>
+                    </div>
+
+                    <div class="text-center">
+                        <button class="btn btn-reiniciar-turnero btn-sm px-4" id="btn-reiniciar">
+                            ↻ Reiniciar Sistema
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="./recursos/js/script.js"></script>
 </body>
+
 </html>
