@@ -1,0 +1,70 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 3rem 1rem;
+  font-family: 'Fredoka', sans-serif;
+  background-color: #ffc93c;
+}
+
+.juego-card {
+  background-color: #ffffff;
+  border: 4px solid #1d1d1d;
+  border-radius: 18px;
+  box-shadow: 10px 10px 0 #1d1d1d;
+}
+
+.titulo-juego {
+  font-weight: 700;
+  font-size: 2.3rem;
+  color: #1d3557;
+  margin-bottom: 0.5rem;
+}
+
+.subtitulo-juego {
+  color: #555555;
+}
+
+.btn-arriesgar {
+  background-color: #e63946;
+  border: 3px solid #1d1d1d;
+  color: #ffffff;
+  padding: 0.6rem 1.5rem;
+}
+
+.btn-arriesgar:hover,
+.btn-arriesgar:focus {
+  background-color: #c92a37;
+  color: #ffffff;
+}
+
+#input-numero {
+  border: 3px solid #1d1d1d;
+  border-right: none;
+}
+
+.chip-intentos {
+  display: inline-block;
+  background-color: #ffe8a3;
+  border: 2px solid #1d1d1d;
+  color: #1d1d1d;
+  padding: 0.35rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.stat-valor {
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: #e63946;
+}
+
+.stat-label {
+  color: #555555;
+  font-size: 0.75rem;
+}
+
+.stat-borde {
+  border-left: 2px solid #1d1d1d;
+  border-right: 2px solid #1d1d1d;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./recursos/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./recursos/css/styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+
+                <div class="card juego-card border-0 p-4 p-md-5">
+
+                    <div class="text-center mb-4">
+                        <h1 class="titulo-juego">Adivina el número</h1>
+                        <p class="subtitulo-juego">La computadora eligió un número del 1 al 1000. ¿Podés adivinarlo?</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="input-group input-group-lg mb-3">
+                            <input type="number" id="input-numero" class="form-control text-center fw-bold"
+                                placeholder="Ingresá tu número" min="1" max="1000">
+                            <button class="btn btn-arriesgar fw-bold" id="btn-arriesgar" onclick="verificarNumero()">Arriesgar</button>
+                        </div>
+                        <div class="text-center">
+                            <span class="chip-intentos">
+                                Intentos actuales: <span id="intentos-actuales">0</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div id="mensaje-feedback" class="alert alert-info text-center fw-bold d-none" role="alert">
+                        <!-- Acá JS inyectará "Es muy alto", "Es muy bajo" o "¡Ganaste!" -->
+                    </div>
+
+                    <div class="text-center mt-3 mb-4">
+                        <button class="btn btn-outline-danger btn-sm px-3 rounded-pill" id="btn-reiniciar" onclick="reiniciarPartida()">
+                            Reiniciar partida actual
+                        </button>
+                    </div>
+
+                    <hr>
+
+                    <!-- Estadísticas Históricas (Donde uso AJAX) -->
+                    <div class="row text-center mt-3">
+                        <div class="col-4">
+                            <div class="stat-valor" id="mejor-puntaje">-</div>
+                            <small class="stat-label">Mejor puntaje</small>
+                        </div>
+                        <div class="col-4 stat-borde">
+                            <div class="stat-valor" id="partidas-jugadas">0</div>
+                            <small class="stat-label">Partidas</small>
+                        </div>
+                        <div class="col-4">
+                            <div class="stat-valor" id="promedio-intentos">0</div>
+                            <small class="stat-label">Promedio</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./recursos/js/script.js"></script>
+</body>
+
+</html>
