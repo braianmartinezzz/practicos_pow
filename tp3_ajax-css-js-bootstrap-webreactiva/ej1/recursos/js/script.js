@@ -1,10 +1,30 @@
 let numeroRandom = Math.floor(Math.random() * 1000) + 1;
 let intentos = 0;
 
-// Contadores historicos
-let partidasFinalizadas = 0;
-let sumaTotalIntentos = 0;
-let mejorPuntaje = null;
+let estadisticas = {
+    partidasFinalizadas: 0,
+    sumaTotalIntentos: 0,
+    mejorPuntaje: null
+};
+
+function cargarEstadisticas() {
+    let datosGuardados = localStorage.getItem('statsJuego');
+
+    if (datosGuardados !== null) {
+        estadisticas = JSON.parse(datosGuardados);
+
+        let promedio = 0;
+        if (estadisticas.partidasFinalizadas > 0) {
+            promedio = estadisticas.sumaTotalIntentos / estadisticas.partidasFinalizadas;
+        }
+
+        document.getElementById('partidas-jugadas').innerText = estadisticas.partidasFinalizadas;
+        document.getElementById('promedio-intentos').innerText = promedio.toFixed(1);
+        document.getElementById('mejor-puntaje').innerText = estadisticas.mejorPuntaje !== null ? estadisticas.mejorPuntaje : "-";
+    }
+}
+
+cargarEstadisticas();
 
 function verificarNumero() {
     let numero = Number(document.getElementById('input-numero').value);
@@ -13,7 +33,7 @@ function verificarNumero() {
 
     if (numero === 0) return;
 
-    intentos++
+    intentos++;
     contadorVisual.innerText = intentos;
 
     if (numero < numeroRandom) {
@@ -28,29 +48,27 @@ function verificarNumero() {
         resultado.innerHTML = '¡Felicidades! Adivinaste el número secreto.';
         resultado.className = 'alert alert-success text-center fw-bold shadow-sm efecto-ganador';
 
-        partidasFinalizadas++;
-        sumaTotalIntentos += intentos;
+        estadisticas.partidasFinalizadas++;
+        estadisticas.sumaTotalIntentos += intentos;
 
-        let promedio = sumaTotalIntentos / partidasFinalizadas;
+        let promedio = estadisticas.sumaTotalIntentos / estadisticas.partidasFinalizadas;
 
-        if (mejorPuntaje === null || intentos < mejorPuntaje) {
-            mejorPuntaje = intentos;
+        if (estadisticas.mejorPuntaje === null || intentos < estadisticas.mejorPuntaje) {
+            estadisticas.mejorPuntaje = intentos;
         }
 
-        document.getElementById('partidas-jugadas').innerText = partidasFinalizadas;
-        document.getElementById('promedio-intentos').innerText = promedio.toFixed(1); // .toFixed(1) deja un solo decimal
-        document.getElementById('mejor-puntaje').innerText = mejorPuntaje;
+        document.getElementById('partidas-jugadas').innerText = estadisticas.partidasFinalizadas;
+        document.getElementById('promedio-intentos').innerText = promedio.toFixed(1);
+        document.getElementById('mejor-puntaje').innerText = estadisticas.mejorPuntaje;
+
+        localStorage.setItem('statsJuego', JSON.stringify(estadisticas));
     }
-
-
 }
 
 function reiniciarPartida() {
     numeroRandom = Math.floor(Math.random() * 1000) + 1;
-
     intentos = 0;
     document.getElementById('intentos-actuales').innerText = intentos;
-
     document.getElementById('input-numero').value = '';
     let resultado = document.getElementById('mensaje-feedback');
     resultado.className = 'd-none';
